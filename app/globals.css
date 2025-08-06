@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+body {
+  background: var(--bg, linear-gradient(180deg, #fff1ee 0%, #fff 100%));
+  font-family: var(--font-FCDefragment), sans-serif;
+}
+
+@theme {
+  --color-primary-800: #802812;
+  --color-primary-700: #bc3717;
+  --color-primary-500: #fe481c;
+  --color-primary-300: #ff714f;
+  --color-primary-200: #ff896d;
+  --color-primary-100: #ffa994;
+
+  --color-dark-purple-800: #110523;
+  --color-dark-purple-700: #160a2a;
+  --color-dark-purple-500: #1f1234;
+  --color-dark-purple-300: #5d3899;
+  --color-dark-purple-200: #8460be;
+  --color-dark-purple-100: #b693ef;
+
+  --color-grey-scale-white: #fff;
+  --color-grey-scale-black: #333;
+  --color-grey-scale-grey: #5f5f5f;
+  --color-grey-scale-placeholder: #adadad;
+  --color-grey-scale-stroke: #e8e8e8;
+}
+
+.default-layout {
+  @apply flex flex-col justify-center items-center w-full p-8 lg:p-16 space-y-8;
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .homepage-bg {
+    background-image: url("https://funcslash.com/flynary/home_background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #110523;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3),
+      0 0 40px rgba(255, 87, 51, 0.4);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.float-1 {
+  animation: float 4s ease-in-out infinite;
+}
+.float-2 {
+  animation: float 3.5s ease-in-out infinite;
+}
+.float-3 {
+  animation: float 5s ease-in-out infinite;
+}
