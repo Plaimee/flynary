@@ -4,7 +4,7 @@ import SULogo from "@/public/ict_silpakorn_logo.svg";
 import { logoSponsors, teamRoles, textSponsors } from "@/lib/data";
 import { socialLinks } from "@/lib/data";
 import Link from "next/link";
-import { Github } from 'lucide-react';
+import { Github } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -107,7 +107,7 @@ const Footer = () => {
 
       <section className="flex flex-col items-center lg:flex-row lg:items-start w-full gap-4 lg:gap-8">
         <h2 className="text-lg font-semibold lg:w-1/4 lg:text-left text-grey-scale-black">
-          Website Repo
+          Website Repository
         </h2>
 
         <div className="flex w-full justify-center gap-4 lg:w-3/4 lg:justify-end">

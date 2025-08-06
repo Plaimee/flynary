@@ -48,7 +48,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${FCDefragment.variable} antialiased`}>
         {children}
-        <ConsentManager />s
+        <ConsentManager />
       </body>
     </html>
   );
